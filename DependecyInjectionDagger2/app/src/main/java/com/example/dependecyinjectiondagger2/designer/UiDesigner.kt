@@ -9,7 +9,6 @@ class UiDesigner @Inject constructor(private val computer: Computer, private val
     override fun designIt() {
         computer.start()
         sketchApp.start()
-        //Log.i("UI_DESIGNER", "UI Designer Start coding..")
         Logger.d("UI Designer Start coding..")
     }
 }
