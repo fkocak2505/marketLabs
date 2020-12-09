@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var softwareCompany: SoftwareCompany
 
-    @Inject
+    /*@Inject
     lateinit var dog: Dog
 
     @Inject
@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var turtle: Turtle
 
     @Inject
-    lateinit var turtle1: Turtle
+    lateinit var turtle1: Turtle*/
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

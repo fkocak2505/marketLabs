@@ -22,7 +22,7 @@ object AppModule {
         uiDesigner: UiDesigner,
         androidDeveloper: AndroidDeveloper
     ): SoftwareCompany {
-        Toast.makeText(context, "I'm used ComponentBuilder & BindInstance.. :) ", Toast.LENGTH_LONG)
+        Toast.makeText(context, "I'm using @BindInstance", Toast.LENGTH_LONG)
             .show()
         return SoftwareCompany(uiDesigner, androidDeveloper)
     }
@@ -37,3 +37,4 @@ object AppModule {
 
 
 }
+
