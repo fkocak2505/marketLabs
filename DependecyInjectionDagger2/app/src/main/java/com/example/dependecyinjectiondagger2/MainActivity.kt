@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var softwareCompany: SoftwareCompany
 
-    /*@Inject
+    @Inject
     lateinit var dog: Dog
 
     @Inject
     lateinit var dog1: Dog
 
-    @Inject
+    /*@Inject
     lateinit var turtle: Turtle
 
     @Inject
@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         softwareCompany.createApp()
 
-        /*Logger.d("injected: $dog")
+        Logger.d("injected: $dog")
         Logger.d("injected: $dog1")
 
-        Logger.d("injected: $turtle")
+        /*Logger.d("injected: $turtle")
         Logger.d("injected: $turtle1")*/
 
     }
