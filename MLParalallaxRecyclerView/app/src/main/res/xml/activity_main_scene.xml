@@ -13,7 +13,6 @@
             motion:touchAnchorSide="top"
             motion:dragDirection="dragUp"/>
 
-
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

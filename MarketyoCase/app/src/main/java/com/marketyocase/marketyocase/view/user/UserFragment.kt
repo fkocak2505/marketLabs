@@ -116,7 +116,7 @@ class UserFragment : Fragment() {
             }
         })
 
-        viewModel.loading.observe(viewLifecycleOwner, Observer { isLoading ->
+        viewModel.loadingHUD.observe(viewLifecycleOwner, Observer { isLoading ->
             isLoading?.let {
                 usersLoadingView.visibility = if (it) View.VISIBLE else View.GONE
                 if (it) {
