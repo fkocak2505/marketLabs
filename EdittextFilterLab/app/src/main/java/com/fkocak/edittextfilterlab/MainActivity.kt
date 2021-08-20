@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val validationOfEmail = VIFEmail(binding.editText, this@MainActivity)
+        val validationOfEmail = VIFEmail(binding.etEmail, this@MainActivity)
             .etLosesFocus(".", 4)
             .ignoreMultipleSpesificSymbol("@")
             .ignoreFirstSpesificChar(mutableListOf("@","."))
             .ignoreConsecutiveChars(".")
             .ignoreTwoCharsConsecutive(mutableListOf(".@", "@."))
 
-        binding.editText.filters = arrayOf(validationOfEmail)
+        binding.etEmail.filters = arrayOf(validationOfEmail)
 
 
         val validationOfName = VIFName(this@MainActivity)
@@ -35,17 +35,14 @@ class MainActivity : AppCompatActivity() {
             .ignoreVowelCharByLimit(3)
             .ignoreConsonantCharByLimit(4)
 
-        binding.editTex1.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-        binding.editTex1.filters = arrayOf(validationOfName)
+        binding.etName.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        binding.etName.filters = arrayOf(validationOfName)
 
-        val validationOfPhone = VIFPhone(binding.editTex2, this@MainActivity)
+        val validationOfPhone = VIFPhone(binding.etPhone, this@MainActivity)
             .etLoseFunction("5", "+90")
 
-        binding.editTex2.filters = arrayOf(validationOfPhone)
-
-//        binding.aaaaa.setOnClickListener {
-//            binding.editText.clearFocus()
-//        }
+        binding.etPhone.filters = arrayOf(validationOfPhone)
+        
 
     }
 }
