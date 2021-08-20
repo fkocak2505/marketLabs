@@ -2,8 +2,10 @@ package com.fkocak.edittextfilterlab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
 import com.fkocak.edittextfilterlab.databinding.ActivityMainBinding
 import com.fkocak.vif.VIFEmail
+import com.fkocak.vif.VIFName
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +26,16 @@ class MainActivity : AppCompatActivity() {
             .ignoreTwoCharsConsecutive(mutableListOf(".@", "@."))
 
         binding.editText.filters = arrayOf(validationOfEmail)
+
+
+        val validationOfName = VIFName(this@MainActivity)
+            .ignoreFirstSpesificChar(mutableListOf("ğ", " "))
+            .ignoreConsecutiveCharByLimit(2)
+            .ignoreVowelCharByLimit(3)
+            .ignoreConsonantCharByLimit(4)
+
+        binding.editTex1.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        binding.editTex1.filters = arrayOf(validationOfName)
 
 //        binding.aaaaa.setOnClickListener {
 //            binding.editText.clearFocus()
