@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             .etLoseFunction("5", "+90")
 
         binding.etPhone.filters = arrayOf(validationOfPhone)
-        
+
 
     }
 }
