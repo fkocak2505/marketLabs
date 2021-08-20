@@ -6,6 +6,7 @@ import android.text.InputType
 import com.fkocak.edittextfilterlab.databinding.ActivityMainBinding
 import com.fkocak.vif.VIFEmail
 import com.fkocak.vif.VIFName
+import com.fkocak.vif.VIFPhone
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.editTex1.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
         binding.editTex1.filters = arrayOf(validationOfName)
+
+        val validationOfPhone = VIFPhone(binding.editTex2, this@MainActivity)
+            .etLoseFunction("5", "+90")
+
+        binding.editTex2.filters = arrayOf(validationOfPhone)
 
 //        binding.aaaaa.setOnClickListener {
 //            binding.editText.clearFocus()
